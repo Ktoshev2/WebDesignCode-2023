@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>JS Two Truths and a Lie</title>
+<head>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kyle's Two Truths and a Lie Game</h1>
+    <hr>
+    <b>Which of these is the lie?</b>
+    <form id="2truths">
+        <br>
+        <input type="radio" id="truth1" name="2truths&lie" value="true">
+        <label for="truth1">I was born in 2007</label>
+        <br>
+        <input type="radio" id="lie" name="2truths&lie" value="false">
+        <label for="lie">My sister is 23 years old</label>
+        <br>
+        <input type="radio" id="truth2" name="2truths&lie" value="true">
+        <label for="truth2">My favorite color is blue</label>
+        <br>
+        <br>
+        <input type="button" value="Submit" onclick="checkTruth()">
+    </form>
+    <p>You are exactly... </p>
+    <h2 id="result"></h2>
+    <script>
+        function checkTruth() {
+            let resultTag = document.getElementById('result');
+            if (document.getElementById('truth1').checked) {
+                resultTag.innerHTML="WRONG!!!"
+                document.body.style.backgroundColor = "red";
+                setTimeout(returnBackground, 500)
+            }
+            if (document.getElementById('truth2').checked) {
+                resultTag.innerHTML="WRONG!!!"
+                document.body.style.backgroundColor = "red";
+                setTimeout(returnBackground, 500)
+            }
+            if (document.getElementById('lie').checked) {
+                resultTag.innerHTML="CORRECT!!!"
+                document.body.style.backgroundColor = "green";
+                setTimeout(returnBackground, 500)
+            }
+        }
+        function returnBackground(){
+            document.body.style.backgroundColor = "aliceblue";
+        }
+    </script>
+</body>
+
+</html>

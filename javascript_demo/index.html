@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Demo</title>
+</head>
+
+<body>
+    <h1>Let's learn javascript</h1>
+
+    <h2>How to do onclick events</h2>
+
+    <a href="https://eastsideprep.org" target="_blank"
+        onclick="alert('Warning! You are navigating away from this page!')">School Website</a>
+
+    <hr>
+    <h2>Display a secret message on button click</h2>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='SHHHHHHHH';
+        getElementById('secret').style.display='block'">Reveal!</button>
+    <button onclick="getElementById('secret').style.display='none'"
+    >Hide!</button>
+    <hr>
+
+</body>
+
+</html>
