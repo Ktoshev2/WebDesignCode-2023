@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Improved Hill's Barbershop Website</title>
-        <link rel="stylesheet" href="css/style.css">
-        <style>
-        </style>
-    </head>
-    <body>
-        <div class="grid-container">
-            <div class="grid-item navmenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="styles.html">Styles</a></li>
-                    <li><a href="contact_and_address.html">Contacts and Address</a></li>
-                    <li><a href="book.html">Book a Haircut</a></li>
-                    <li><a href="socials.html">Social Media</a></li>
-                </ul>
-            </div>
-            <div class="grid-item title-space"><img src="images/BG.jpg" alt="background picture" width="100%"></div>
+
+<head>
+    <title>Improved Hill's Barbershop Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .facebook {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        .desc {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .yelp {
+            grid-row: 2;
+            grid-column: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="contact_and_address.html">Contacts and Address</a></li>
+                <li><a href="book.html">Book a Haircut</a></li>
+                <li><a href="socials.html">Social Media</a></li>
+            </ul>
         </div>
-    </body>
+        <div class="grid-item facebook">
+            <a href="https://www.facebook.com/hillsbarbershopredmond" target="_blank"><img src="images/fb.jpg"
+                    alt="facebook icon" width="100%"></a>
+        </div>
+        <div class="grid-item desc">
+            <h1>Find Us on Social Media!</h1>
+            <h3>You can access our Facebook and Yelp pages by clicking on the icons on the sides.</h3>
+        </div>
+        <div class="grid-item yelp">
+            <a href="https://www.yelp.com/biz/hills-barbershop-redmond" target="_blank"><img src="images/ylp.jpg"
+                    alt="yelp icon" width="100%"></a>
+        </div>
+    </div>
+</body>
+
 </html>
