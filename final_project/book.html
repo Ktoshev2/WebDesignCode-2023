@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Improved Hill's Barbershop Website</title>
-        <link rel="stylesheet" href="css/style.css">
-        <style>
-        </style>
-    </head>
-    <body>
-        <div class="grid-container">
-            <div class="grid-item navmenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="styles.html">Styles</a></li>
-                    <li><a href="contact_and_address.html">Contacts and Address</a></li>
-                    <li><a href="book.html">Book a Haircut</a></li>
-                    <li><a href="socials.html">Social Media</a></li>
-                </ul>
-            </div>
-            <div class="grid-item title-space"><img src="images/BG.jpg" alt="background picture" width="100%"></div>
+
+<head>
+    <title>Improved Hill's Barbershop Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-title {
+            grid-row: 4;
+            grid-column: 1 / span 3;
+        }
+
+        .form-space {
+            grid-row: 5;
+            grid-column: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="contact_and_address.html">Contacts and Address</a></li>
+                <li><a href="book.html">Book a Haircut</a></li>
+                <li><a href="socials.html">Social Media</a></li>
+            </ul>
         </div>
-    </body>
+        <div class="grid-item title-space"><img src="images/BG.jpg" alt="background picture" width="100%"></div>
+        <div class="grid-item form-title">
+            <h1>Fill out the form below to book a haircut</h1>
+        </div>
+        <div class="grid-item form-space">
+            <form id="booking-info">
+                <p>First and Last Name:</p>
+                <input type="text" id="name" name="booking">
+                <br>
+                <p>Type of Haircut:</p>
+                <input type="radio" id="regular" name="haircut">
+                <label for="regular">Regular Cut</label>
+                <br>
+                <input type="radio" id="scissor" name="haircut">
+                <label for="scissor">Scissor Cut</label>
+                <br>
+                <input type="radio" id="short-fade" name="haircut">
+                <label for="short-fade">Short Fade</label>
+            </form>
+        </div>
+    </div>
+</body>
+
 </html>
