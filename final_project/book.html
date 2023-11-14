@@ -14,6 +14,17 @@
             grid-row: 5;
             grid-column: 2;
         }
+
+        td {
+            text-align: center;
+        }
+
+        .button-style {
+            height: 100px;
+            width: 200px;
+            font-size: 30px;
+            background-color: #eae1dc;
+        }
     </style>
 </head>
 
@@ -33,22 +44,95 @@
             <h1>Fill out the form below to book a haircut</h1>
         </div>
         <div class="grid-item form-space">
-            <form id="booking-info">
+            <form id="form">
                 <p>First and Last Name:</p>
-                <input type="text" id="name" name="booking">
+                <input type="text" id="name" name="booking" required="required">
                 <br>
                 <p>Type of Haircut:</p>
-                <input type="radio" id="regular" name="haircut">
+                <input type="radio" id="regular" name="haircut" required="required" value="regular haircut">
                 <label for="regular">Regular Cut</label>
                 <br>
-                <input type="radio" id="scissor" name="haircut">
+                <input type="radio" id="scissor" name="haircut" required="required" value="scissor haircut">
                 <label for="scissor">Scissor Cut</label>
                 <br>
-                <input type="radio" id="short-fade" name="haircut">
+                <input type="radio" id="short-fade" name="haircut" required="required" value="short fade haircut">
                 <label for="short-fade">Short Fade</label>
+                <br>
+                <input type="radio" id="buzz" name="haircut" required="required" value="buzz cut">
+                <label for="buzz">Buzz Cut</label>
+                <br>
+                <input type="radio" id="beard-trim" name="haircut" required="required" value="beard trim">
+                <label for="beard-trim">Beard Trim</label>
+                <br>
+                <input type="radio" id="long-beard" name="haircut" required="required" value="long beard trim">
+                <label for="long-beard">Long Beard Trim</label>
+                <br>
+                <input type="radio" id="long-hair" name="haircut" required="required" value="long haircut">
+                <label for="long-hair">Long Hair</label>
+                <br>
+                <input type="radio" id="custom" name="haircut" required="required" value="custom haircut">
+                <label for="custom">Custom Hair</label>
+                <br>
+                <p>Time of Haircut:</p>
+                <center>
+                    <table width="70%">
+                        <tr>
+                            <th>Day of the Week</th>
+                            <th>Available Times</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>9:30am - 6:30pm</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>9:30am - 6:30pm</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>9:30am - 6:30pm</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>9:30am - 6:30pm</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:30am - 5:00pm</td>
+                        </tr>
+                    </table>
+                </center>
+                <br>
+                <p>Enter Day of the Week:</p>
+                <input type="text" id="day-of-week" name="day-of-week" required="required">
+                <br>
+                <p>Enter Time of Haircut:</p>
+                <input type="text" id="time" name="time-of-day" required="required">
+                <br>
+                <br>
+                <p>The following text message will be sent to Mr. Young:</p>
+                <p id="output-space">
+                    "Hello! My name is ___. I am interested getting a _____ haircut this _____ at _______. Are you available then?"
+                </p>
+                <br>
+                <input class="button-style" type="button" id="button" value="Submit" onclick="output()">
             </form>
         </div>
     </div>
+    <script>
+        function output() {
+            let output = document.getElementById("output-space");
+            output.innerHTML='"Hello! My name is ' + document.getElementById('name').value + '. I am interested getting a ' + document.querySelector('input[name="haircut"]:checked').value + ' this ' + document.getElementById('day-of-week').value + ' at ' + document.getElementById('time').value +'. Are you available then?"';
+        }
+    </script>
 </body>
 
 </html>
